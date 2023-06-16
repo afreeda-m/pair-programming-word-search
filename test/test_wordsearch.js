@@ -35,4 +35,61 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
+
+  it("should return true if the word is present", function () {
+    const result = wordSearch(
+      [
+        ["A", "W", "C", "F", "Q", "U", "A", "L"],
+        ["S", "E", "I", "N", "F", "E", "L", "D"],
+        ["Y", "F", "C", "F", "Q", "U", "A", "L"],
+        ["H", "M", "J", "T", "F", "V", "R", "G"],
+        ["W", "H", "C", "S", "R", "E", "R", "L"],
+        ["B", "F", "R", "E", "A", "E", "Y", "B"],
+        ["U", "B", "T", "W", "N", "P", "A", "I"],
+        ["O", "D", "C", "A", "K", "U", "A", "S"],
+        ["E", "Z", "K", "F", "Q", "U", "A", "L"],
+      ],
+      "FRANK"
+    );
+    assert.isTrue(result);
+  });
+
+  it("should return true if the word is present", function () {
+    const result = wordSearch(
+      [
+        ["A", "W", "C", "F", "Q", "U", "A", "L"],
+        ["S", "E", "I", "N", "F", "E", "L", "D"],
+        ["Y", "F", "C", "F", "Q", "U", "A", "L"],
+        ["H", "M", "J", "T", "F", "V", "R", "G"],
+        ["W", "H", "C", "S", "R", "E", "R", "L"],
+        ["B", "F", "R", "E", "A", "E", "Y", "B"],
+        ["U", "B", "T", "W", "N", "P", "A", "I"],
+        ["O", "D", "C", "A", "K", "N", "A", "S"],
+        ["E", "Z", "K", "F", "Q", "U", "A", "L"],
+      ],
+      "SANK"
+    );
+
+    assert.isTrue(result);
+  });
+
+
+  it("should return true if the word is present", function () {
+    const result = wordSearch(
+      [
+        ["A", "W", "C", "F", "Q", "U", "A", "L"],
+        ["S", "E", "I", "N", "F", "E", "L", "D"],
+        ["Y", "F", "C", "F", "Q", "U", "A", "L"],
+        ["H", "M", "J", "T", "F", "V", "R", "G"],
+        ["W", "H", "C", "S", "R", "E", "N", "L"],
+        ["B", "F", "R", "E", "A", "E", "O", "B"],
+        ["U", "B", "T", "W", "N", "P", "R", "I"],
+        ["O", "D", "C", "A", "K", "N", "A", "S"],
+        ["E", "Z", "K", "F", "Q", "U", "A", "L"],
+      ],
+      "AARON"
+    );
+
+    assert.isTrue(result);
+  });
 });
