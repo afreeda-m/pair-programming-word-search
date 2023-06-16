@@ -1,6 +1,6 @@
 const wordSearch = (letters, word) => { 
     // if array not empty check for word
-  if (!letters.length) {
+  if (!letters.length || word === "") {
     return false;
   }else if(horizontal( letters, word)){
     return true;
